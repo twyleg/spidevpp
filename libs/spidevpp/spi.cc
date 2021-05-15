@@ -11,7 +11,7 @@ Spi::Spi(const std::string& device)
 	: mDevice(device)
 {
 	if ((mFd = open(mDevice.c_str(), O_RDWR)) < 0) {
-		throw std::runtime_error("");
+		throw std::runtime_error("Unable to open device");
 	}
 }
 
